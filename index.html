@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit and Growth Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Deposit Growth Chart</h1>
+
+<!-- Форма для ввода данных пользователем -->
+<div class="form-container">
+    <!-- Поле для ввода начального вклада -->
+    <label for="initialDeposit">Initial Deposit (in $): </label>
+    <input type="number" id="initialDeposit" placeholder="Enter amount" required><br><br>
+
+    <!-- Поле для ввода годовой процентной ставки -->
+    <label for="rate">Annual Interest Rate (in %): </label>
+    <input type="number" id="rate" placeholder="Enter rate" required><br><br>
+
+    <!-- Поле для ввода количества лет -->
+    <label for="years">Number of Years: </label>
+    <input type="number" id="years" placeholder="Enter years" required><br><br>
+
+    <!-- Кнопка, при нажатии на которую вызывается функция построения графика -->
+    <button onclick="drawChart()">Generate Chart</button>
+</div>
+
+<!-- Canvas — элемент для отрисовки графика -->
+<canvas id="depositChart" width="600" height="400"></canvas>
+
+<!-- Подключение JavaScript файла -->
+<script src="script.js"></script>
+</body>
+</html>
